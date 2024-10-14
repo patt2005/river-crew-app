@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-// Definește culorile globale
-Color kBackgroundColor = Colors.black; // Setează fundalul la negru
+import 'package:river_crew_app/utils/utils.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,7 +25,7 @@ class _HomePageState extends State<HomePage> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.asset(
-                  "images/Designer (18) 1.png",
+                  "images/Designer (17) 1.png",
                   fit: BoxFit.cover,
                   width: size.width * 0.8,
                   height: size.height * 0.25,

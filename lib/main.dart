@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:river_crew_app/home.page.dart';
+import 'package:river_crew_app/utils/provider.dart';
+import 'package:river_crew_app/utils/utils.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      child: const MyApp(),
+      create: (context) => AppService(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,6 +18,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
